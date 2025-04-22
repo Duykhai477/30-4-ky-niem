@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kỷ Niệm 30/4 - Ngày Thống Nhất Rực Rỡ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff0000, #ffd700);
+            color: #fff;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px;
+            position: relative;
+            z-index: 10;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #ffd700, 0 0 30px #ff0000;
+            }
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #ffd700, 0 0 40px #ff0000;
+            }
+        }
+
+        .content {
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            animation: slideUp 1s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .flag {
+            width: 250px;
+            margin: 20px auto;
+            transition: transform 0.3s;
+        }
+
+        .flag:hover {
+            transform: scale(1.1);
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        .fireworks {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .firework {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #ffd700;
+            border-radius: 50%;
+            animation: explode 1.5s ease-out infinite;
+            opacity: 0;
+        }
+
+        @keyframes explode {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(3);
+                opacity: 0;
+            }
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            margin-top: auto;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #ff0000;
+            color: #ffd700;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1.2em;
+            margin: 10px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .button:hover {
+            background: #cc0000;
+            transform: translateY(-5px);
+        }
+
+        .fb-button {
+            background: #1877f2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .fb-button:hover {
+            background: #145db2;
+        }
+
+        .fb-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+            .content {
+                margin: 10px;
+                padding: 20px;
+            }
+            .flag {
+                width: 150px;
+            }
+            .button {
+                padding: 10px 20px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="fireworks" id="fireworks"></div>
+    <header>
+        <h1>Kỷ Niệm 50 Năm Ngày Thống Nhất 30/4/1975 - 30/4/2025</h1>
+    </header>
+
+    <div class="content">
+        <h2>Chào Mừng Ngày Giải Phóng Miền Nam, Thống Nhất Đất Nước</h2>
+        <img class="flag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/2560px-Flag_of_Vietnam.svg.png" alt="Quốc kỳ Việt Nam">
+        <p>
+            Ngày 30 tháng 4 năm 1975 là cột mốc lịch sử vĩ đại, đánh dấu sự toàn thắng của dân tộc Việt Nam trong cuộc kháng chiến chống Mỹ, thống nhất đất nước. 
+            Đây là ngày hòa bình được lập lại, Bắc Nam sum họp, mở ra một kỷ nguyên mới cho sự phát triển và thịnh vượng❤️.
+        </p>
+        <p>
+            Hãy cùng nhau tri ân những anh hùng đã hy sinh, và chung tay xây dựng một Việt Nam rực rỡ, vững mạnh❤️!
+        </p>
+        <a href="#" class="button">Bấm Nút Bên Dưới🥰</a>
+        <a href="https://www.facebook.com/giapduykhai.00" class="button fb-button" target="_blank">
+            <img class="fb-icon" src="https://www.facebook.com/giapduykhai.00" alt="Facebook Icon">
+            Liên Hệ Tôi Trên FacebookFacebook
+        </a>
+    </div>
+
+    <footer>
+        <p>© 2025 - Trang web Duy Khải tạo để kỷ niệm 30/4 | Thiết kế với niềm tự hào dân tộc</p>
+    </footer>
+
+    <script>
+        // Fireworks effect
+        const fireworksContainer = document.getElementById('fireworks');
+        function createFirework() {
+            const firework = document.createElement('div');
+            firework.classList.add('firework');
+            firework.style.left = Math.random() * 100 + 'vw';
+            firework.style.top = Math.random() * 100 + 'vh';
+            firework.style.background = `hsl(${Math.random() * 360}, 100%, 50%)`;
+            fireworksContainer.appendChild(firework);
+            setTimeout(() => firework.remove(), 1500);
+        }
+        setInterval(createFirework, 300);
+    </script>
